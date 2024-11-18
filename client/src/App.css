@@ -1,0 +1,90 @@
+/* App.css */
+
+/* 通用页面样式 */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f2f5;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* App 根样式 */
+.App {
+  text-align: center;
+  padding: 20px;
+}
+
+/* 标题样式 */
+.App-header h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* 导航栏样式 */
+.App-header nav {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+/* 导航链接样式 */
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #0056b3;
+}
+
+/* 被激活页面的链接样式 */
+nav a.active-link {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+/* 主内容样式 */
+main {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* 通用按钮样式 */
+button {
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* 列表项样式 */
+.task-item, .character-info, .shop-item {
+  text-align: left;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  max-width: 600px;
+}

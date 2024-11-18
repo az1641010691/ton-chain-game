@@ -1,48 +1,22 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import './CharacterInfo.css'; // 导入角色信息的样式文件
 
 function CharacterInfo() {
-  // 角色状态
-  const [character, setCharacter] = useState({
-    name: '勇者',
-    level: 1,
-    gToken: 500,
-    equipment: ['木剑']
-  });
-
-  // 升级角色函数
-  const levelUp = () => {
-    setCharacter(prevCharacter => ({
-      ...prevCharacter,
-      level: prevCharacter.level + 1,
-      gToken: prevCharacter.gToken - 100 // 升级需要花费代币
-    }));
-  };
-
-  // 本地存储角色数据
-  useEffect(() => {
-    const savedCharacter = JSON.parse(localStorage.getItem('character'));
-    if (savedCharacter) {
-      setCharacter(savedCharacter);
-    }
-  }, []);
-
-  useEffect(() => {
-    localStorage.setItem('character', JSON.stringify(character));
-  }, [character]);
-
   return (
-    <div>
+    <div className="character-info-container">
       <h2>角色信息</h2>
-      <p>名称: {character.name}</p>
-      <p>等级: {character.level}</p>
-      <p>代币数量: {character.gToken}</p>
-      <p>装备: {character.equipment.join(', ')}</p>
-      {/* 角色升级按钮 */}
-      {character.gToken >= 100 ? (
-        <button onClick={levelUp}>升级角色 (100 GToken)</button>
-      ) : (
-        <p>升级需要更多的 GToken!</p>
-      )}
+      <div className="character-card">
+        <h3>角色名称: 神秘战士</h3>
+        <p>等级: 5</p>
+        <p>生命值: 500 / 500</p>
+        <p>攻击力: 70</p>
+        <p>防御力: 50</p>
+        <div className="character-equipment">
+          <h4>当前装备:</h4>
+          <p>武器: 火焰剑</p>
+          <p>防具: 龙鳞甲</p>
+        </div>
+      </div>
     </div>
   );
 }

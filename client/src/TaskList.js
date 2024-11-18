@@ -1,8 +1,8 @@
+// TaskList Component with Improved Styles
 import React, { useEffect, useState } from 'react';
-import './App.css';
+import './TaskList.css'; // 导入任务列表样式
 
 function TaskList() {
-  // 任务列表和任务状态
   const [tasks, setTasks] = useState([]);
 
   useEffect(() => {
@@ -17,33 +17,19 @@ function TaskList() {
     fetchTasks();
   }, []);
 
-  const acceptTask = (taskId) => {
-    setTasks(prevTasks =>
-      prevTasks.map(task =>
-        task.id === taskId ? { ...task, status: '进行中' } : task
-      )
-    );
-    alert(`接受任务: ${taskId}`);
-  };
-
   return (
-    <div className="task-container">
+    <div className="task-list-container">
       <h2>可用任务</h2>
-      <ul>
+      <div className="task-cards">
         {tasks.map(task => (
-          <li key={task.id} className="task-item">
+          <div key={task.id} className="task-card">
             <h3>{task.name}</h3>
             <p>{task.description}</p>
             <p>奖励: {task.reward} GToken</p>
-            <p>状态: {task.status}</p>
-            {task.status === '未接受' && (
-              <button onClick={() => acceptTask(task.id)} className="task-button">
-                接受任务
-              </button>
-            )}
-          </li>
+            <button className="accept-task-button" onClick={() => alert(`接受任务: ${task.name}`)}>接受任务</button>
+          </div>
         ))}
-      </ul>
+      </div>
     </div>
   );
 }

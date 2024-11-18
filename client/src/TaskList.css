@@ -1,0 +1,40 @@
+/* TaskList.css - Improved Styles for TaskList Component */
+.task-list-container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .task-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .task-card {
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+    transition: transform 0.2s;
+  }
+  
+  .task-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .accept-task-button {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .accept-task-button:hover {
+    background-color: #0056b3;
+  }

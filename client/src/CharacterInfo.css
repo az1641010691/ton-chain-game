@@ -1,0 +1,26 @@
+.character-info-container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .character-card {
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .character-equipment {
+    margin-top: 15px;
+  }
+  
+  .character-equipment h4 {
+    margin-bottom: 5px;
+  }
+  
+  .character-equipment p {
+    margin: 2px 0;
+  }
