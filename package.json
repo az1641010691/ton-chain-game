@@ -7,5 +7,11 @@
   },
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.0.0",
+    "tonweb": "^0.0.66"
+  }
 }
